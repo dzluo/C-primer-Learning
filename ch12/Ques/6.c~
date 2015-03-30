@@ -1,12 +1,12 @@
 
 
 #include<stdio.h>
-#define COUNT 100
+#define COUNT 10
 #define RANGE 10
 void main(void)
 {
-  int list[COUNT];
-  int count[RANGE];
+  int list[COUNT - 1];
+  int count[RANGE - 1];
   int i;
   int k;
   for(i = 0; i < RANGE; i++)
@@ -24,6 +24,6 @@ void main(void)
               }
           }
     }
-   for(i = 0; i < RANGE; i++)
-     printf("%d : %d\n", i+1, count[i]);
+  for(i = 0; i < RANGE; i++)
+    printf("%d : %d\n", i+1, count[i]);
 }
