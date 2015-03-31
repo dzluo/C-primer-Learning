@@ -26,7 +26,7 @@ int main(int argc, char * argv[])
   strcpy(name, argv[1]);
   strcat(name, ".red");
   // Open the output file
-  if((out = fopen(name, "wb")) == NULL)
+  if((out = fopen(name, "w")) == NULL)
   {
     fprintf(stderr, "Can't create output file.\n");
     exit(3);
@@ -34,7 +34,7 @@ int main(int argc, char * argv[])
   // get Char from input file and print in the ouput file
   while((ch = getc(in) != EOF))
     if(count++ %3 == 0)
-       putc(ch, out);
+       fprintf(out, "test");
 
   if(fclose(in) != 0 || fclose(out) != 0) 
     fprintf(stderr, "Error in closing files\n");
